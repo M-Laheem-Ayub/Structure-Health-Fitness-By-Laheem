@@ -1,0 +1,133 @@
+
+
+.my-indicators{
+    z-index: 15;
+    flex-direction: column;
+    top: 40% !important;
+    left: 50px !important;
+    margin: 0 !important;
+}
+.my-ind{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px !important ;
+    opacity: 1 !important;
+    width:15px !important ;
+     border-radius: 50%;
+     margin: 2px;
+    background-color: rgba(232, 232, 232, 0.63) !important;
+    border: 2px solid white !important;
+    transition: all 0.3s ease !important;
+
+}
+.dot{
+    display: none;
+    height: 7px;
+    width: 7px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    transition: all 0.3s ease !important;
+}
+.my-ind.active {
+    border: 2px solid #ffcc00 !important;
+    background-color:transparent !important ;
+  }
+.my-ind.active .dot{
+    display: block;
+}
+.my-ind:hover{
+    border: 2px solid #ffcc00 !important;
+    background-color:transparent !important ;
+  }
+.my-ind:hover .dot{
+    display: block;
+}
+
+.s1, .s2, .s3, .s4 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 900px;
+}
+
+.s1 {
+    background-image: url('/public/assets/images/Slide_1.jpg');
+}
+
+.s2 {
+    background-image: url('/public/assets/images/Slide_2.jpg');
+}
+
+.s3 {
+    background-image: url('/public/assets/images/Slide_3.jpg');
+}
+
+.s4 {
+    background-image: url('/public/assets/images/Slide_4.jpg');
+}
+
+.right-corner{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 24.3%;
+    height: 34%;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+}
+
+.slide-all-content{
+    z-index: 2;
+    position: absolute;
+    bottom: 21%;
+    right: 10px;
+    display: flex;
+    justify-content: end;
+}
+.slide-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+
+.slide-text{
+    margin: -15px;
+    font-size: 53px;
+   font-family: "Montserrat",sans-serif;
+   font-weight:900;
+}
+
+.text-side-line{
+    width: 10px;
+    background-color: #ffcc00;
+
+}
+
+.slide-btn{
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+    font-size: 26px;
+    background-color: #ffcc00;
+    font-family: "Montserrat",sans-serif;
+    position: absolute;
+    padding: 18px 70px;
+    bottom: 8%;
+    right: 6%;
+    z-index: 5;
+}
+
+.slide-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.left-corner{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 70%;
+    height: 57%;
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+}
