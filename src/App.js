@@ -9,16 +9,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 import "./App.css";
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
 
   );
