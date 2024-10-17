@@ -37,12 +37,12 @@ const Header = () => {
               <li className="nav-item n-item">
                 <a className="nav-link n-item text-light" href="#">Contact</a>
               </li>
-              <li className="nav-item">
-                <button type="button" className="join-btn border-0 text-light">Join Now</button>
+              <li className="nav-item">git
+                <button type="button" className="join-btn border-0 text-light">Join Us</button>
               </li>
               <li className="nav-item s-icon">
                 <a className="nav-link" href="#" onClick={toggleSearch}>
-                  <img className="search-icon" src="/assets/images/search icon.png" alt="Search" />
+                  <img className="search-icon" src="/public/assets/images/search icon.png" alt="Search" />
                 </a>
               </li>
             </ul>
