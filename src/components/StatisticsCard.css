@@ -1,0 +1,24 @@
+.my-stat-card{
+    height: 223px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.card-num{
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+.stat-title{
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+ color: #ffd200;
+ font-weight:600;
+}

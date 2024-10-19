@@ -1,0 +1,25 @@
+.title-box{
+   
+    background-color: #d3d4d6;
+}
+@media (max-width: 768px){
+    .ready-title{
+        font-size: 20px !important;
+    }
+    .side-icon{
+        width: 12px !important;
+        height: 20px !important;
+    }
+}
+.side-icon{
+    
+    color: #ffd200;
+    width: 19px;
+    height: 29px;
+}
+.ready-title{
+    color: black;
+    font-size: 29px;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+}

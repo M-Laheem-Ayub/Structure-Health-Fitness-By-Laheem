@@ -1,0 +1,51 @@
+
+.my-card{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #333333;
+    align-items: center;
+    border: 1px solid black;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.my-card:hover {
+    box-shadow: -2px 15px 8px rgba(0, 0, 0, 0.5);
+}
+
+.circle{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #ffd200;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.circle:hover{
+    background-color: white;
+}
+
+.icon{
+    color: white;
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s ease;
+}
+
+.circle:hover .icon{
+    color: #ffd200;
+}
+
+.title{
+    font-size: 18px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}

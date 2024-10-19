@@ -23,7 +23,7 @@ const Slider = () => {
                     </button>
                 ))}
             </div>
-            <div className="carousel-inner">
+            <div className="carousel-inner slide-box">
                 {slidesData.map(({ id, backgroundClass, t1, t2, t3, t4, btnText }, index) => (
                     <div key={id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                         <div className={`${backgroundClass}`}>
@@ -35,12 +35,12 @@ const Slider = () => {
                                     <div className='slide-text'>{t3}</div>
                                     {id === 3 && <div className='slide-text'>{t4}</div>}
                                 </div>
-                                <div className='text-side-line ms-4'></div>
+                                <div className='text-side-line'></div>
                             </div>
                         </div>
-                        <button className='slide-btn'>
+                        <div className='slide-btn'>
                         {btnText}
-                        </button>
+                        </div>
                         <div className=' left-corner'></div>
                     </div>
 

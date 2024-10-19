@@ -6,6 +6,7 @@ const HeroSec = () => {
   return (
     <div>
       <Slider/>
+      <div className='divider'></div>
     </div>
   )
 }
