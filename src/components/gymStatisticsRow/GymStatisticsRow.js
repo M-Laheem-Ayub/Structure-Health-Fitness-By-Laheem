@@ -1,6 +1,6 @@
 import React from 'react'
-import StatisticsCard from './StatisticsCard'
-import gymStatisticsData from '../api/gymStatisticsData'
+import StatisticsCard from '../statisticsCard/StatisticsCard'
+import gymStatisticsData from '../../api/home/gymStatisticsData'
 import './GymStatisticsRow.css'
 
 const GymStatisticsRow = () => {

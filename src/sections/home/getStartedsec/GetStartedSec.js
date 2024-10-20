@@ -1,10 +1,10 @@
 import React from 'react'
 import './GetStartedSec.css'
-import HoverImg from '../../components/HoverImg'
-import RightParaRow from '../../components/RightParaRow'
-import LeftParaRow from '../../components/LeftParaRow'
-import LeftRowData from '../../api/LeftRowData'
-import RightRowData from '../../api/RightRowData'
+import HoverImg from '../../../components/hoverImg/HoverImg'
+import RightParaRow from '../../../components/rightParaRow/RightParaRow'
+import LeftParaRow from '../../../components/leftParaRow/LeftParaRow'
+import LeftRowData from '../../../api/home/LeftRowData'
+import RightRowData from '../../../api/home/RightRowData'
 
 const GetStartedSec = () => {
   return (

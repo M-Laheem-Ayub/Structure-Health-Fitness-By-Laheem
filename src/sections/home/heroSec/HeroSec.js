@@ -1,6 +1,6 @@
 import React from 'react'
 import './HeroSec.css';
-import Slider from '../../components/Slider'
+import Slider from '../../../components/slider/Slider';
 
 const HeroSec = () => {
   return (

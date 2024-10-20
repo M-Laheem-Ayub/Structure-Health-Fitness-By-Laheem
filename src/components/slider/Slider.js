@@ -1,6 +1,6 @@
 import React from 'react';
 import './Slider.css';
-import slidesData from '../api/slidesData';
+import slidesData from '../../api/home/slidesData';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

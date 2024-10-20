@@ -1,6 +1,6 @@
 import React from 'react';
-import GoalsRow from '../../components/GoalsRow';
-import GymStatisticsRow from '../../components/GymStatisticsRow';
+import GoalsRow from '../../../components/goalsRow/GoalsRow';
+import GymStatisticsRow from '../../../components/gymStatisticsRow/GymStatisticsRow';
 import './OurProcessSec.css';
 
 const OurProcessSec = () => {

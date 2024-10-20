@@ -1,6 +1,6 @@
 import React from 'react';
-import goalCardData from '../api/goalCardData';
-import GoalCard from './GoalCard';
+import goalCardData from '../../api/home/goalCardData';
+import GoalCard from '../goalCard/GoalCard';
 
 const GoalsRow = () => {
   return (
