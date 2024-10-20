@@ -1,0 +1,28 @@
+.para-title{
+    color: #222222;
+    font-size: 34px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    text-shadow: 2px 0.5px 3px rgba(0, 0, 0, 0.5);
+}
+.container{
+    background: transparent;
+}
+@media (max-width:1024px) {
+    .para-title{
+        font-size: 25px !important;
+    }
+    .para-text{
+        font-size: 15px !important;
+    }
+}
+.para-text{
+    color: black;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+}
+.para-img{
+    box-shadow: -5px 5px 12px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,8 @@
+.para-contant {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)),
+        url(/public/assets/images/para_bg.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -1,25 +1,105 @@
-.title-box{
-   
+.title-box {
     background-color: #d3d4d6;
+    margin: 0;
 }
-@media (max-width: 768px){
-    .ready-title{
+
+@media (max-width: 768px) {
+    .ready-title {
         font-size: 20px !important;
     }
-    .side-icon{
+
+    .side-icon {
         width: 12px !important;
         height: 20px !important;
     }
 }
-.side-icon{
-    
+
+.r-side-icon {
+    display: flex;
+    justify-self: start;
+}
+
+.l-side-icon {
+    display: flex;
+    justify-content: end;
+}
+
+.side-icon {
     color: #ffd200;
     width: 19px;
     height: 29px;
 }
-.ready-title{
+
+.ready-title {
     color: black;
     font-size: 29px;
     font-weight: 800;
     font-family: "Montserrat", sans-serif;
+}
+
+.bg-img-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (max-width: 768px) {
+    .bg-img-r {
+        background-image: url(/public/assets/images/our_classes_1.png);
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .bg-img-l {
+        background-image: url(/public/assets/images/our_trainers_2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bg-img-r img {
+        opacity: 0 !important;
+        width: 97vw !important;
+    }
+
+    .bg-img-l img {
+        opacity: 0 !important;
+        width: 97vw !important;
+    }
+
+}
+
+.bg-img-r img {
+    transition: all 0.3s ease;
+    width: 49vw;
+}
+
+.bg-img-l img {
+    transition: all 0.3s ease;
+    width: 49vw;
+}
+
+.bg-img-r:hover img {
+    opacity: 0.9;
+}
+
+.bg-img-l:hover img {
+    opacity: 0.9;
+}
+
+.our-btn {
+    opacity: 0;
+    text-decoration: none;
+    font-size: 23px;
+    position: absolute;
+    font-weight: 700;
+    padding: 0px 25px;
+    background-color: #d3d4d6;
+}
+
+.bg-img-l {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
