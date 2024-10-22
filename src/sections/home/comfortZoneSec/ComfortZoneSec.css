@@ -1,0 +1,77 @@
+.ComfortZone-body {
+    background-image: url(/public/assets/images/BG_ComfortZone.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.ComfortZone-contant {
+    /* height: 42vw; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+}
+
+@media (max-width:1024px) {
+    .ComfortZone-heading-1 {
+        font-size: 40px !important;
+    }
+
+    .ComfortZone-heading-2 {
+        font-size: 50px !important;
+    }
+
+    .ComfortZone-text {
+        font-size: 12px !important;
+    }
+
+    .ComfortZone-btn {
+        font-size: 12px !important;
+        padding: 9px 0px !important;
+        width: 191px !important;
+    }
+
+}
+
+.ComfortZone-heading-1 {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 58px;
+    font-family: "Oswald", sans-serif;
+}
+
+.ComfortZone-heading-2 {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 100px;
+    font-family: "Oswald", sans-serif;
+    color: #ffd200;
+}
+
+.ComfortZone-text {
+    text-align: end;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.ComfortZone-btn {
+    width: 224px;
+    padding: 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffd200;
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}

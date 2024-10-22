@@ -3,16 +3,6 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .ready-title {
-        font-size: 20px !important;
-    }
-
-    .side-icon {
-        width: 12px !important;
-        height: 20px !important;
-    }
-}
 
 .r-side-icon {
     display: flex;
@@ -44,7 +34,8 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
     .bg-img-r {
         background-image: url(/public/assets/images/our_classes_1.png);
         background-size: cover;
@@ -60,14 +51,21 @@
 
     .bg-img-r img {
         opacity: 0 !important;
-        width: 97vw !important;
+        width: 97% !important;
     }
 
     .bg-img-l img {
         opacity: 0 !important;
-        width: 97vw !important;
+        width: 97% !important;
+    }
+    .ready-title {
+        font-size: 20px !important;
     }
 
+    .side-icon {
+        width: 12px !important;
+        height: 20px !important;
+    }
 }
 
 .bg-img-r img {

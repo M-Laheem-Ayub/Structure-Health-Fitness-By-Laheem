@@ -11,7 +11,7 @@ const GetStartedSec = () => {
     <div className=''>
       <HoverImg />
 
-        <div className='pt-4 para-contant'>
+        <div className='pt-4 pb-5 para-contant'>
           <LeftParaRow
             title={LeftRowData[0].title}
             para={LeftRowData[0].para}

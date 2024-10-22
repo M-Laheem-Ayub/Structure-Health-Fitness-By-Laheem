@@ -15,7 +15,7 @@ const HoverImg = () => {
                         <FontAwesomeIcon icon={faAngleDoubleDown} className="side-icon  " aria-hidden="true" />
                     </div>
                 </div>
-                <div className='row mt-5'>
+                <div className=' row mt-5'>
                     <div className='col-md-6 col-12 bg-img-r'>
                     <img src={`${process.env.PUBLIC_URL}/assets/images/our_classes.png`} alt='classes' />
 
