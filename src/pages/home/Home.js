@@ -6,6 +6,7 @@ import GetStartedSec from "../../sections/home/getStartedsec/GetStartedSec";
 import TestimonialsSec from "../../sections/home/testimonialsSec/TestimonialsSec";
 import ComfortZoneSec from "../../sections/home/comfortZoneSec/ComfortZoneSec";
 import GymFactsSec from "../../sections/home/gymFactsSec/GymFactsSec";
+import SpecialOfferSec from "../../sections/home/specialOfferSec/SpecialOfferSec";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <TestimonialsSec/>
       <GymFactsSec/>
       <ComfortZoneSec/>
+      <SpecialOfferSec/>
     </section>
   );
 };

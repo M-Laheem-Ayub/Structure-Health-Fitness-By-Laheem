@@ -1,0 +1,107 @@
+/* FormComponent.css */
+.form-container {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-header {
+    padding: 5px 0px;
+    font-weight: 700;
+    font-size: 22px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222222;
+    background-color: white;
+    width: 98.5%;
+}
+
+.form-text {
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 20px 0px 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    width: 100%;
+    height: 40px;
+}
+
+.form-group input, .form-group select {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #222222;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.form-group input::placeholder {
+    color: #757575;
+}
+
+.form-group select {
+    background-color: #333;
+}
+
+.form-group .submit-btn {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffd200;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    font-size: 12px;
+    padding: 14px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-group .submit-btn:hover {
+    background-color: #ffe260;
+}
+
+@media (max-width: 1060px) {
+    .form-container {
+        width: 98% !important;
+    }
+
+    .form-header {
+        font-size: 18px;
+    }
+
+    .form-text {
+        padding: 20px 2px 0px 2px;
+    }
+
+    .form-group input, .form-group select {
+        width: 30vw;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 760px) {
+    .form-group input, .form-group select {
+        width: 65vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-group input, .form-group select {
+        width: 75vw;
+    }
+}
