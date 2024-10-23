@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Structure-Health-Fitness-By-Laheem/static/css/main.03e0933f.css",
-    "main.js": "/Structure-Health-Fitness-By-Laheem/static/js/main.053224f3.js",
+    "main.css": "/Structure-Health-Fitness-By-Laheem/static/css/main.34419c06.css",
+    "main.js": "/Structure-Health-Fitness-By-Laheem/static/js/main.121c379a.js",
     "static/media/para_bg.png": "/Structure-Health-Fitness-By-Laheem/static/media/para_bg.48dedca6f82ae6680dd5.png",
     "static/media/our_classes_1.png": "/Structure-Health-Fitness-By-Laheem/static/media/our_classes_1.41b32e4a6cdcd1b20b55.png",
     "static/media/our_trainers_2.png": "/Structure-Health-Fitness-By-Laheem/static/media/our_trainers_2.e025a6ba37352d0be159.png",
@@ -9,14 +9,15 @@
     "static/media/Slide_2.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_2.a3bc643608efbaccacb0.jpg",
     "static/media/Slide_1.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_1.b06c1742d3702919c88b.jpg",
     "static/media/Slide_4.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_4.67c12362418e2848c5e9.jpg",
+    "static/media/BG_kuch.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/BG_kuch.b39f0bb222eec8c3f4d7.jpg",
     "static/media/BG_Testimonials.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/BG_Testimonials.6bd9d65a8e89105ba8bf.jpg",
     "static/media/BG_ComfortZone.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/BG_ComfortZone.cfe9f16f95602ea33ab3.jpg",
     "index.html": "/Structure-Health-Fitness-By-Laheem/index.html",
-    "main.03e0933f.css.map": "/Structure-Health-Fitness-By-Laheem/static/css/main.03e0933f.css.map",
-    "main.053224f3.js.map": "/Structure-Health-Fitness-By-Laheem/static/js/main.053224f3.js.map"
+    "main.34419c06.css.map": "/Structure-Health-Fitness-By-Laheem/static/css/main.34419c06.css.map",
+    "main.121c379a.js.map": "/Structure-Health-Fitness-By-Laheem/static/js/main.121c379a.js.map"
   },
   "entrypoints": [
-    "static/css/main.03e0933f.css",
-    "static/js/main.053224f3.js"
+    "static/css/main.34419c06.css",
+    "static/js/main.121c379a.js"
   ]
 }
