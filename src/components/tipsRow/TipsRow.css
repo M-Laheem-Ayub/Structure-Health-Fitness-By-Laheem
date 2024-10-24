@@ -1,0 +1,35 @@
+.tip-icon{
+    color: #adadad;
+}
+.tip-body{
+    height: 58vh;
+    background-color: #f5f5f5;
+    border: 1px solid #ffd200;
+}
+@media (max-width:768px) {
+    .tip-body{
+        height: auto !important;
+    }
+}
+.tip-link-con a{
+    font-size: 12px;
+    color: #adadad;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+
+}
+.bold-tip{
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: #54595f;
+    font-weight: 600;
+}
+.tip-text{
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif; 
+    color:#7A7A7A
+}
+.tip-container{
+    background-color: #f5f5f5;
+    box-shadow: 2px 2px 20px #bcbcbc;
+}

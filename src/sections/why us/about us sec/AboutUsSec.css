@@ -1,0 +1,81 @@
+.about-us-body{
+    background-color:#333333 ;
+}
+.about-text{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+.why-link{
+    border-bottom: 1px solid  #d5d8dc;
+    padding: 15px;
+    line-height: 1;
+    cursor: pointer;
+}
+.why-link-icon{
+    font-size: 16px;
+}
+.why-link-text{
+    font-size: 29px;
+    font-weight: 700;
+}
+.why-box{
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #ffd200;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1 / 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wb-1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/assets/images/Traning_team.jpg);
+}
+.wb-1:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/assets/images/Traning_team.jpg);
+}
+.wb-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/assets/images/Our_story.jpg);
+}
+.wb-2:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/assets/images/Our_story.jpg);
+}
+.wb-3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/assets/images/FAQ.jpg);
+}
+.wb-3:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/assets/images/FAQ.jpg);
+}
+.wb-4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/assets/images/Gym_facility.jpg);
+}
+.wb-4:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/assets/images/Gym_facility.jpg);
+}
+.why-box-link{
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+@media (max-width:1024px) {
+    .why-link-text{
+        font-size: 20px !important;
+    }
+    .why-box-link{
+       font-size: 24px;
+    }
+    
+}
+@media (max-width:768px) {
+    .about-text{
+        font-size: 20px;
+    }
+
+    
+}

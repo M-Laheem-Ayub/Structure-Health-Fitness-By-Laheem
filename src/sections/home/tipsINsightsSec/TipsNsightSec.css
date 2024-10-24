@@ -1,0 +1,44 @@
+.tip-sec-body{
+    /* height: 100vh; */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)),
+url(/public/assets/images/para_bg.png);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.tip-sec-title{
+    display: flex;
+}
+.tip-sec-bold-title{
+    color: #222222;
+    font-size: 39px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width:768px) {
+    .tip-sec-bold-title{
+        font-size: 25px;
+        
+    }
+    .tip-sec-title-text{
+        text-align: center !important;
+        width: 95% !important;
+    }
+}
+
+.tip-sec-divider{
+    width: 5px;
+
+    background-color: #ffd200;
+    
+}
+.tip-sec-title-text{
+    width: 80%;
+    text-align: start;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: #222222;
+}

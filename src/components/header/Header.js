@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './Header.css';
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({BgColor}) => {
   const [isSearchVisible, setSearchVisible] = useState(false);
 
   const toggleSearch = () => {
@@ -9,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header ps-lg-5 pe-lg-4">
+    <header className={`header ${BgColor} ps-lg-5 pe-lg-4`}>
       <nav className="mx-lg-2 navbar bg-transparent navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand image-container" href="#">
@@ -19,11 +20,12 @@ const Header = () => {
             <img src={`${process.env.PUBLIC_URL}/assets/images/menu.png`} className="menu-icon" />
             <span className="text-light menu-text">Menu</span>
           </button>
-          
+
           <div className="collapse navbar-collapse w-100" id="navbarSupportedContent">
             <ul className="navbar-nav d-flex justify-content-end w-100 mb-2 mb-lg-0">
               <li className="nav-item n-item">
-                <a className="nav-link n-item text-light" aria-current="page" href="#">Why Us</a>
+                <Link className=" text-decoration-none" to="/why-us"><a className="nav-link n-item text-light" aria-current="page" href="#">Why Us</a>
+                </Link>
               </li>
               <li className="nav-item n-item">
                 <a className="nav-link n-item text-light" href="#">Membership</a>
@@ -42,7 +44,7 @@ const Header = () => {
               </li>
               <li className="nav-item s-icon">
                 <a className="nav-link" href="#" onClick={toggleSearch}>
-                <img className="search-icon" src={`${process.env.PUBLIC_URL}/assets/images/search icon.png`} alt="Search" />
+                  <img className="search-icon" src={`${process.env.PUBLIC_URL}/assets/images/search icon.png`} alt="Search" />
                 </a>
               </li>
             </ul>

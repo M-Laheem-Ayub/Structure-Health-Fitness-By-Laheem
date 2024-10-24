@@ -1,0 +1,126 @@
+.footer-body {
+    z-index: 100;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/public/assets/images/BG_footer.jpg);
+    background-blend-mode: multiply;
+}
+
+.footer-title {
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    /* text-align: start; */
+    font-weight: 600;
+}
+
+.left-footer-text {
+    font-size: 15px !important;
+    /* text-align: start; */
+    font-family: "Montserrat", sans-serif;
+    line-height: 27px;
+
+}
+
+.footer-icons-con {
+    /* border: 1px solid white; */
+    /* text-align: start; */
+    font-size: 11px;
+}
+
+.footer-icons-con a {
+    text-decoration: none;
+    margin: 0px 16px 0px 8px;
+    color: white;
+}
+
+.footer-icons-con a:hover {
+    color: #ffd200;
+}
+
+.center-footer-links {
+    /* text-align: start; */
+}
+
+.center-footer-links a {
+    display: block;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    padding: 7px 0px;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    color: white;
+}
+.footer-branches-con{
+    overflow: hidden;
+}
+@media (max-width:768px) {
+    .footer-branches-con{
+        width: 100%;
+
+        border-bottom: 1px solid #ffd200;
+    }
+}
+
+.time-table-title {
+    cursor: pointer;
+    overflow:hidden;
+    line-height: 15px;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    padding: 20px 25px;
+    background-color: #222222;
+    font-weight: 600;
+    border-bottom: 1px solid #ffd200;
+}
+
+.time-table-box {
+    display: none;
+    padding: 20px;
+    background-color: #222222;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-align: start;
+    border: 1px solid #ffd200 !important;
+    border-top: none !important;
+
+}
+
+.time-table-box ul {
+    /* padding: 20px; */
+    padding: 0;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.time-table-box ul li {
+    padding: 2px;
+}
+
+.footer-copyright {
+    color: white;
+    padding: 30px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #202020;
+}
+
+.footer-copyright a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.footer-copyright a:hover {
+    color: #ffd200;
+}
+
+.my-active {
+    border: 1px solid #ffd200;
+    border-bottom: none;
+    display: block;
+    color: #ffd200;
+}

@@ -1,8 +1,13 @@
 header {
   position: fixed;
   width: 100%;
-  background-color: #33333361;
   z-index: 100;
+}
+.home-header-color{
+  background-color: #33333361;
+}
+.why-header-color{
+  background-color: #222222;
 }
 
 .nav-item {
