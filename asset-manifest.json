@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/Structure-Health-Fitness-By-Laheem/static/css/main.d613f383.css",
-    "main.js": "/Structure-Health-Fitness-By-Laheem/static/js/main.67cd4cd5.js",
-    "static/media/pool.webp": "/Structure-Health-Fitness-By-Laheem/static/media/pool.43f50bf5a5332878d6d9.webp",
-    "static/media/para_bg.png": "/Structure-Health-Fitness-By-Laheem/static/media/para_bg.48dedca6f82ae6680dd5.png",
-    "static/media/our_classes_1.png": "/Structure-Health-Fitness-By-Laheem/static/media/our_classes_1.41b32e4a6cdcd1b20b55.png",
-    "static/media/our_trainers_2.png": "/Structure-Health-Fitness-By-Laheem/static/media/our_trainers_2.e025a6ba37352d0be159.png",
-    "static/media/FAQ.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/FAQ.00da98a46d4437560c81.jpg",
-    "static/media/Gym_facility.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Gym_facility.7786531486ca3f2ac051.jpg",
-    "static/media/BG_footer.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/BG_footer.d5e651d39d30cac4e76c.jpg",
-    "static/media/Our_story.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Our_story.58e0663b2547107d5ba5.jpg",
-    "static/media/Slide_3.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_3.0ebc9d6483edab6f2dd8.jpg",
-    "static/media/Slide_2.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_2.a3bc643608efbaccacb0.jpg",
-    "static/media/Slide_1.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_1.b06c1742d3702919c88b.jpg",
-    "static/media/Traning_team.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Traning_team.833509bcc0b279117728.jpg",
-    "static/media/Slide_4.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_4.67c12362418e2848c5e9.jpg",
-    "static/media/BG_kuch.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/BG_kuch.b39f0bb222eec8c3f4d7.jpg",
+    "main.css": "/Structure-Health-Fitness-By-Laheem/static/css/main.a6b4943b.css",
+    "main.js": "/Structure-Health-Fitness-By-Laheem/static/js/main.272151f4.js",
+    "static/media/BG_thanks.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_thanks.4182030fd25fdee78932.webp",
+    "static/media/para_bg.webp": "/Structure-Health-Fitness-By-Laheem/static/media/para_bg.48dedca6f82ae6680dd5.webp",
+    "static/media/our_classes_1.webp": "/Structure-Health-Fitness-By-Laheem/static/media/our_classes_1.41b32e4a6cdcd1b20b55.webp",
+    "static/media/pool.webp": "/Structure-Health-Fitness-By-Laheem/static/media/pool.7022f5078788d01a5c95.webp",
+    "static/media/our_trainers_2.webp": "/Structure-Health-Fitness-By-Laheem/static/media/our_trainers_2.e025a6ba37352d0be159.webp",
+    "static/media/FAQ.webp": "/Structure-Health-Fitness-By-Laheem/static/media/FAQ.00da98a46d4437560c81.webp",
+    "static/media/Gym_facility.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Gym_facility.7786531486ca3f2ac051.webp",
+    "static/media/BG_footer.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_footer.d5e651d39d30cac4e76c.webp",
+    "static/media/Our_story.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Our_story.58e0663b2547107d5ba5.webp",
+    "static/media/Slide_3.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_3.0ebc9d6483edab6f2dd8.webp",
+    "static/media/Slide_2.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_2.a3bc643608efbaccacb0.webp",
+    "static/media/Slide_1.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_1.b06c1742d3702919c88b.webp",
+    "static/media/Traning_team.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Traning_team.833509bcc0b279117728.webp",
+    "static/media/Slide_4.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Slide_4.67c12362418e2848c5e9.webp",
+    "static/media/BG_kuch.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_kuch.b39f0bb222eec8c3f4d7.webp",
     "static/media/Bg_branches.webp": "/Structure-Health-Fitness-By-Laheem/static/media/Bg_branches.e5025529f1743c315a99.webp",
-    "static/media/BG_Testimonials.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/BG_Testimonials.6bd9d65a8e89105ba8bf.jpg",
-    "static/media/BG_ComfortZone.jpg": "/Structure-Health-Fitness-By-Laheem/static/media/BG_ComfortZone.cfe9f16f95602ea33ab3.jpg",
+    "static/media/BG_Testimonials.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_Testimonials.6bd9d65a8e89105ba8bf.webp",
+    "static/media/BG_ComfortZone.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_ComfortZone.cfe9f16f95602ea33ab3.webp",
     "index.html": "/Structure-Health-Fitness-By-Laheem/index.html",
-    "main.d613f383.css.map": "/Structure-Health-Fitness-By-Laheem/static/css/main.d613f383.css.map",
-    "main.67cd4cd5.js.map": "/Structure-Health-Fitness-By-Laheem/static/js/main.67cd4cd5.js.map"
+    "main.a6b4943b.css.map": "/Structure-Health-Fitness-By-Laheem/static/css/main.a6b4943b.css.map",
+    "main.272151f4.js.map": "/Structure-Health-Fitness-By-Laheem/static/js/main.272151f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.d613f383.css",
-    "static/js/main.67cd4cd5.js"
+    "static/css/main.a6b4943b.css",
+    "static/js/main.272151f4.js"
   ]
 }
