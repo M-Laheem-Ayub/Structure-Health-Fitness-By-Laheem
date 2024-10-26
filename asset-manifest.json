@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Structure-Health-Fitness-By-Laheem/static/css/main.a6b4943b.css",
-    "main.js": "/Structure-Health-Fitness-By-Laheem/static/js/main.272151f4.js",
+    "main.css": "/Structure-Health-Fitness-By-Laheem/static/css/main.531334d7.css",
+    "main.js": "/Structure-Health-Fitness-By-Laheem/static/js/main.82171e1e.js",
     "static/media/BG_thanks.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_thanks.4182030fd25fdee78932.webp",
     "static/media/para_bg.webp": "/Structure-Health-Fitness-By-Laheem/static/media/para_bg.48dedca6f82ae6680dd5.webp",
     "static/media/our_classes_1.webp": "/Structure-Health-Fitness-By-Laheem/static/media/our_classes_1.41b32e4a6cdcd1b20b55.webp",
@@ -21,11 +21,11 @@
     "static/media/BG_Testimonials.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_Testimonials.6bd9d65a8e89105ba8bf.webp",
     "static/media/BG_ComfortZone.webp": "/Structure-Health-Fitness-By-Laheem/static/media/BG_ComfortZone.cfe9f16f95602ea33ab3.webp",
     "index.html": "/Structure-Health-Fitness-By-Laheem/index.html",
-    "main.a6b4943b.css.map": "/Structure-Health-Fitness-By-Laheem/static/css/main.a6b4943b.css.map",
-    "main.272151f4.js.map": "/Structure-Health-Fitness-By-Laheem/static/js/main.272151f4.js.map"
+    "main.531334d7.css.map": "/Structure-Health-Fitness-By-Laheem/static/css/main.531334d7.css.map",
+    "main.82171e1e.js.map": "/Structure-Health-Fitness-By-Laheem/static/js/main.82171e1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6b4943b.css",
-    "static/js/main.272151f4.js"
+    "static/css/main.531334d7.css",
+    "static/js/main.82171e1e.js"
   ]
 }
