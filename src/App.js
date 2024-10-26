@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route} from 'react-router-dom';
+import { HashRouter, Routes, Route, BrowserRouter} from 'react-router-dom';
 import Home from "./pages/home/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -9,7 +9,6 @@ import OurBranches from './pages/our branches/OurBranches';
 import Contact from './pages/contact/Contact';
 import ThanksYou from './pages/thanks you/ThanksYou';
 
-// Main App component
 function App() {
   return (
     <div className="App">
@@ -25,11 +24,10 @@ function App() {
   );
 }
 
-// Export the App component with HashRouter
 const Root = () => (
-  <HashRouter>
+  <BrowserRouter>
     <App />
-  </HashRouter>
+  </BrowserRouter>
 );
 
-export default Root; // Ensure the export is correct
+export default Root; 
