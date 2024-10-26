@@ -3,7 +3,7 @@ import './AlertBox.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
-function AlertBox({ show, onClose }) {
+function AlertBox({ show, onClose, onFormSubmit }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
@@ -23,9 +23,11 @@ function AlertBox({ show, onClose }) {
 
         setError('');
         setLoading(true);
+        
+        // Simulating a network request
         setTimeout(() => {
             setLoading(false);
-            window.location.href = '/thank-you';
+            onFormSubmit();  // Call the parent function to handle submission
         }, 2000);
     };
 
@@ -45,7 +47,7 @@ function AlertBox({ show, onClose }) {
                     <div className="row my-bg-light">
                         <div className="col-12 col-md-6 overflow-hidden d-flex justify-content-center align-items-center">
                             <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/alert_img.png`}
+                                src={`${process.env.PUBLIC_URL}/assets/images/alert_img.webp`}
                                 alt="Alert"
                                 className="alert-image"
                             />

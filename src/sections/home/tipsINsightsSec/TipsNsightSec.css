@@ -2,7 +2,7 @@
     /* height: 100vh; */
     background-image: linear-gradient(rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.5)),
-url(/public/assets/images/para_bg.png);
+url(/public/assets/images/para_bg.webp);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;

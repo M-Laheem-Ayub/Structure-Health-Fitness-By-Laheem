@@ -1,0 +1,87 @@
+.fitness-form-bg {
+    color: #ffd200;
+    padding: 20px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/public/assets/images/BG_footer.webp);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+  }
+  
+  .fitness-form label {
+    font-weight: 400;
+    display: block;
+    /* margin-top: 14px; */
+    margin-right:10px ;
+    color: #ffff00;
+  }
+  .bmi-img{
+    width: 90%;
+  }
+  .height-weight-section label{
+    display: inline-block;
+  }
+  .fitness-form input,
+  .fitness-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #dddddd;
+  }
+  
+  .checkbox-group,
+  .radio-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .checkbox-group label, .radio-group label {
+    display: flex;
+    color: white;
+  }
+  
+  .height-weight-section input {
+    width: 10%;
+  }
+  
+  
+.form-group .submit-btn {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffd200;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  font-size: 12px;
+  padding: 14px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-group .submit-btn:hover {
+  background-color: #ffe260;
+}
+  
+  input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  p {
+    color: #ffd200;
+    margin: 0;
+  }
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+  

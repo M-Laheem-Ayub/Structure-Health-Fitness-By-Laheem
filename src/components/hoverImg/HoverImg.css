@@ -37,14 +37,14 @@
 @media (max-width: 767px) {
 
     .bg-img-r {
-        background-image: url(/public/assets/images/our_classes_1.png);
+        background-image: url(/public/assets/images/our_classes_1.webp);
         background-size: cover;
         background-position: center;
 
     }
 
     .bg-img-l {
-        background-image: url(/public/assets/images/our_trainers_2.png);
+        background-image: url(/public/assets/images/our_trainers_2.webp);
         background-size: cover;
         background-position: center;
     }

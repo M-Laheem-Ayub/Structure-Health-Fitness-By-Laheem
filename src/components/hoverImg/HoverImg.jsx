@@ -17,14 +17,14 @@ const HoverImg = () => {
                 </div>
                 <div className=' row mt-5'>
                     <div className='col-md-6 col-12 bg-img-r'>
-                    <img src={`${process.env.PUBLIC_URL}/assets/images/our_classes.png`} alt='classes' />
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/our_classes.webp`} alt='classes' />
 
                         <a href='#' className='our-btn '>
                             OUR CLASSES
                         </a>
                     </div>
                     <div className='col-md-6 col-12 bg-img-l'>
-                    <img src={`${process.env.PUBLIC_URL}/assets/images/our_branches.png`} alt='classes' />
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/our_branches.webp`} alt='classes' />
 
                         <a href='#' className='our-btn'>
                             OUR TRAINERS

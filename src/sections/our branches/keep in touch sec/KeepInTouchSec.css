@@ -1,0 +1,101 @@
+.contact-form-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.contact-box-tilte{
+    font-size: 39px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 8px 0 8px  !important;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #757575;
+    font-size: 16px;
+}
+textarea::placeholder{
+    color: white;
+}
+
+select {
+    background-color: #222;
+    color: #fff;
+}
+
+textarea {
+    height: 150px;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.form-group .submit-btn {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffd200;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    font-size: 12px;
+    padding: 14px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-group .submit-btn:hover {
+    background-color: #ffe260;
+}
+
+.contact-info {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info .contact-item {
+    margin: 10px 0;
+}
+
+.contact-info .contact-item p {
+    color: white;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.contact-icon {
+    color: #ffcc00;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.Keep-touch-error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: start;
+}

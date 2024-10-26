@@ -4,7 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/public/assets/images/BG_footer.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/public/assets/images/BG_footer.webp);
     background-blend-mode: multiply;
 }
 
@@ -17,7 +17,7 @@
 
 .left-footer-text {
     font-size: 15px !important;
-    /* text-align: start; */
+    color: white;
     font-family: "Montserrat", sans-serif;
     line-height: 27px;
 
@@ -51,6 +51,10 @@
     border-bottom: 1px solid white;
     text-decoration: none;
     color: white;
+}
+.center-footer-links a:hover {
+  
+    color: #ffd200;
 }
 .footer-branches-con{
     overflow: hidden;

@@ -1,43 +1,35 @@
-import React, { useState, useEffect } from 'react';
-// import Footer from "./components/Footer";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route} from 'react-router-dom';
 import Home from "./pages/home/Home";
-// Import these at the top of your main JavaScript file (index.js or App.js)
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "./App.css";
-import { HashRouter } from "react-router-dom";
-import AlertBox from './components/alertBox/AlertBox';
 import WhyUs from './pages/why us/WhyUs';
+import Membership from './pages/membership/Membership';
+import OurBranches from './pages/our branches/OurBranches';
+import Contact from './pages/contact/Contact';
+import ThanksYou from './pages/thanks you/ThanksYou';
 
+// Main App component
 function App() {
-
-
-  const [showAlert, setShowAlert] = useState(true);
-
-  useEffect(() => {
-    // Website load hone par alert auto-show hoga
-    setShowAlert(true);
-  }, []);
-
-  const handleClose = () => setShowAlert(false);
-
   return (
     <div className="App">
-      <HashRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/why-us' element={<WhyUs />} />
-        </Routes>
-      </HashRouter>
-      <AlertBox
-        show={showAlert}
-        message="Welcome to my website!"
-        onClose={handleClose}
-      />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/why-us' element={<WhyUs />} />
+        <Route path='/membership' element={<Membership />} />
+        <Route path='/our-branches' element={<OurBranches />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/thank-you' element={<ThanksYou />} />
+      </Routes>
     </div>
-
   );
 }
 
-export default App;
+// Export the App component with HashRouter
+const Root = () => (
+  <HashRouter>
+    <App />
+  </HashRouter>
+);
+
+export default Root; // Ensure the export is correct

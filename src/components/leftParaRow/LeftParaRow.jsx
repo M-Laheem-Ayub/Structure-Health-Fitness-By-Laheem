@@ -1,7 +1,7 @@
 import React from 'react'
 import './LeftParaRow.css'
 
-const LeftParaRow = ({ title, para, img = "assets/images/para_2.jpg" }) => {
+const LeftParaRow = ({ title, para, img = "assets/images/para_2.webp" }) => {
     return (
         <div className='container'>
             <div className='row  mt-5 flex-column-reverse flex-md-row'>

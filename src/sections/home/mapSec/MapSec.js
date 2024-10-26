@@ -3,7 +3,7 @@ import './MapSec.css'
 const MapSec = () => {
   return (
     <div>
-     <img src={`${process.env.PUBLIC_URL}/assets/images/map.png`} className='map-img' />
+     <img src={`${process.env.PUBLIC_URL}/assets/images/map.webp`} className='map-img' />
     </div>
   )
 }

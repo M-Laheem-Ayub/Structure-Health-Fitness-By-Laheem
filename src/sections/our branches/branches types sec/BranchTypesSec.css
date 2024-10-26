@@ -1,0 +1,14 @@
+.my-container{
+    background-color: #333333;
+
+}
+.our-pro-title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 39px;
+}
+@media (max-width: 768px){
+    .our-pro-title{
+        font-size: 30px !important;
+    }
+}

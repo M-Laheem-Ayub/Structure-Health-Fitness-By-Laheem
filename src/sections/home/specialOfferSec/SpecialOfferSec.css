@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/assets/images/BG_kuch.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/assets/images/BG_kuch.webp);
     background-blend-mode: multiply; 
 }
 .l-side-line{

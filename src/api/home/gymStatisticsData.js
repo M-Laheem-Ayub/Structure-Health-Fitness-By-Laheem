@@ -11,9 +11,3 @@ const gymStatisticsData = [
 
 export default gymStatisticsData;
 
-{/* <i aria-hidden="true" class="fas fa-map-signs"></i>	
-<i aria-hidden="true" class="fas fa-dumbbell"></i>	
-<i aria-hidden="true" class="fas fa-anchor"></i>	
-<i aria-hidden="true" class="fas fa-swimming-pool"></i>	
-<i aria-hidden="true" class="fas fa-bolt"></i>	
-<i class="fa fa-angle-double-down" aria-hidden="true" style="color:#ffd200"></i> READY TO GET STARTED? <i class="fa fa-angle-double-down" aria-hidden="true" style="color:#ffd200"></i> */}

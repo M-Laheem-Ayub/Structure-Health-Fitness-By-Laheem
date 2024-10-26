@@ -6,8 +6,8 @@ const StatisticsCard = ({icon, num, title}) => {
   return (
     <div className="my-stat-card" >
       <FontAwesomeIcon icon={icon} className="stat-icon" aria-hidden="true" />
-      <div className="card-num">{num}</div>
-    <div className="stat-title">{title}</div>
+      <div className="card-num pt-3">{num}</div>
+    <div className="stat-title pt-2">{title}</div>
   </div>
   )
 }

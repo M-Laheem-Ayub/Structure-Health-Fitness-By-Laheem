@@ -1,5 +1,6 @@
 import React from 'react'
 import './ComfortZoneSec.css'
+import { Link } from 'react-router-dom'
 
 const ComfortZoneSec = () => {
   return (
@@ -12,7 +13,9 @@ const ComfortZoneSec = () => {
           </h2>
           <div className='ComfortZone-text pe-lg-4 pe-1'>Success usually comes to those who are too busy to be looking for it.</div>
           <div className='ComfortZone-text pe-lg-4 pe-1'> The body achieves what the mind believes.</div>
+          <Link className="text-decoration-none " to="/membership">
           <a href='#' className='ComfortZone-btn mt-4 me-lg-4 me-1'>JOIN US TODAY</a>
+          </Link>
         </div>
       </div>
       <div className='ComfortZone-divider'></div>

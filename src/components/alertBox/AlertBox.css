@@ -11,6 +11,7 @@
     z-index: 1000;
     overflow: auto;
     transition: all 0.3s ease;
+    color: black;
 }
 
 .cl {
@@ -94,6 +95,7 @@
 }
 
 .alert-input {
+    color: black;
     border: none;
     width: 100%;
     background-color: transparent;
@@ -105,7 +107,7 @@
 
 .input-container {
     width: 100%;
-    padding: 10px;
+    color: black;
     margin: 3px;
     border: 1px solid black;
 }

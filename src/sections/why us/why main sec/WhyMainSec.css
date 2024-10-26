@@ -1,5 +1,5 @@
 .why-body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/assets/images/BG_footer.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/assets/images/BG_footer.webp);
     display: flex;
     flex-direction: column;
     align-items: center;

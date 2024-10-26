@@ -1,3 +1,6 @@
 .App {
   text-align: center;
 }
+.carousel-item {
+  transition: transform 0.6s ease-in-out !important;
+}
