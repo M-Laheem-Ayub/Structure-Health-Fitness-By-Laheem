@@ -278,8 +278,9 @@ Please review the details and contact the applicant for membership planning.
                 <input type="number" name="weight" value={formData.weight} onChange={handleChange} />
                 <label>Height (feet):</label>
                 <input type="number" name="heightFeet" value={formData.heightFeet} onChange={handleChange} />
-                <label id='tl'>Height (inches):</label>
+                
                 <br/>
+                <label id='tl'>Height (inches):</label>
                 <input type="number" name="heightInches" value={formData.heightInches} onChange={handleChange} />
                 
                 {errors.measurements && <p className="error">{errors.measurements}</p>}
