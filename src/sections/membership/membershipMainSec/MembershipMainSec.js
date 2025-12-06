@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './MembershipMainSec.css';
 import { useNavigate } from 'react-router-dom';
-// Graph ke liye imports
 import {
   BarChart,
   Bar,
@@ -43,9 +42,13 @@ const MembershipMainSec = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: '' }));
-  };
 
+    if (name === 'weight' || name === 'heightFeet' || name === 'heightInches') {
+      setErrors((prev) => ({ ...prev, measurements: '' }));
+    } else {
+      setErrors((prev) => ({ ...prev, [name]: '' }));
+    }
+  };
 
   const handleCheckboxChange = (e) => {
     const { name, value } = e.target;
@@ -55,6 +58,7 @@ const MembershipMainSec = () => {
         ? prev[name].filter((item) => item !== value)
         : [...prev[name], value],
     }));
+    setErrors((prev) => ({ ...prev, [name]: '' }));
   };
 
   useEffect(() => {
@@ -64,7 +68,7 @@ const MembershipMainSec = () => {
       const bmiValue = parseFloat((weight / (heightInMeters ** 2)).toFixed(2));
       let category = '';
       if (bmiValue < 18.5) category = 'Underweight';
-      else if (bmiValue < 25) category = 'Normal'; // Your logic: Normal < 25
+      else if (bmiValue < 25) category = 'Normal';
       else if (bmiValue < 30) category = 'Overweight';
       else category = 'Obese';
       setFormData(prev => ({ ...prev, bmi: bmiValue, bmiCategory: category }));
@@ -81,15 +85,23 @@ const MembershipMainSec = () => {
     if (!formData.gender) newErrors.gender = 'This field is required';
     if (!formData.phone) newErrors.phone = 'This field is required';
     if (!formData.branch) newErrors.branch = 'This field is required';
-    // Physical measurements are required
-    if (!formData.weight) newErrors.weight = 'Weight is required';
-    if (!formData.heightFeet) newErrors.heightFeet = 'Height (feet) is required';
-    if (!formData.heightInches) newErrors.heightInches = 'Height (inches) is required';
-    // Fitness profile is required
+
+    const missingMeasurements = [];
+    if (!formData.weight && formData.weight !== 0 && formData.weight !== "0") missingMeasurements.push('Weight');
+    if (!formData.heightFeet && formData.heightFeet !== 0 && formData.heightFeet !== "0") missingMeasurements.push('Height (feet)');
+    if (!formData.heightInches && formData.heightInches !== 0 && formData.heightInches !== "0") missingMeasurements.push('Height (inches)');
+
+    if (missingMeasurements.length > 0) {
+      const msg =
+        missingMeasurements.length === 3
+          ? 'Please enter weight and height (feet & inches).'
+          : `Please enter: ${missingMeasurements.join(', ')}.`;
+      newErrors.measurements = msg;
+    }
+
     if (formData.fitnessGoals.length === 0) newErrors.fitnessGoals = 'Please select at least one fitness goal';
     if (!formData.smoking) newErrors.smoking = 'Please select smoking status';
     if (!formData.alcohol) newErrors.alcohol = 'Please select alcohol consumption status';
-    // Occupation is optional - user can leave it blank
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -98,7 +110,6 @@ const MembershipMainSec = () => {
     }
 
     try {
-      // Create detailed message from form data
       const fitnessGoalsText = formData.fitnessGoals.length > 0 ? formData.fitnessGoals.join(', ') : 'Not specified';
       
       const message = `
@@ -130,7 +141,6 @@ This is a comprehensive gym membership application submitted through the website
 Please review the details and contact the applicant for membership planning.
       `;
 
-      // Call the backend API to send email
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -142,19 +152,17 @@ Please review the details and contact the applicant for membership planning.
           phone: formData.phone,
           subject: 'Gym Membership Application - Comprehensive Profile',
           message: message,
-          captchaToken: 'verified' // Internal form
+          captchaToken: 'verified'
         })
       });
 
       const result = await response.json();
 
       if (result.success) {
-        // Success - redirect to thank-you page
         setTimeout(() => {
           navigate('/thank-you');
         }, 1000);
       } else {
-        // Error - show error message
         alert('Error: ' + result.message);
         setIsSubmitting(false);
       }
@@ -165,23 +173,20 @@ Please review the details and contact the applicant for membership planning.
     }
   };
 
-  // --- Graph Data Logic (Updated Names) ---
   const getChartData = () => {
     const rawBmi = parseFloat(formData.bmi) || 0;
     const cat = formData.bmiCategory;
     
-    // Labels short kar diye hain taake mobile pe overlap na ho
     return [
-      { name: 'Under', bmi: cat === 'Underweight' ? rawBmi : 0 },      // Short for Underweight
-      { name: 'Normal', bmi: cat === 'Normal' ? rawBmi : 0 },          // Short for Normal weight
-      { name: 'Over', bmi: cat === 'Overweight' ? rawBmi : 0 },        // Short for Overweight
-      { name: 'Obese', bmi: cat === 'Obese' ? rawBmi : 0 },            // Short for Obesity
+      { name: 'Under', bmi: cat === 'Underweight' ? rawBmi : 0 },      
+      { name: 'Normal', bmi: cat === 'Normal' ? rawBmi : 0 },        
+      { name: 'Over', bmi: cat === 'Overweight' ? rawBmi : 0 },       
+      { name: 'Obese', bmi: cat === 'Obese' ? rawBmi : 0 },         
     ];
   };
 
-  const chartData = getChartData(); // Ye line pehle se hogi
+  const chartData = getChartData();
 
-  // --- Graph Component (Reusable) ---
   const renderBmiChart = () => (
     <div className='bmi-visual'>
       <h3 className="text-center text-warning mb-3 d-none d-md-block">BMI Graph</h3>
@@ -234,12 +239,10 @@ Please review the details and contact the applicant for membership planning.
           <div className='col-md-6 col-12 m-0'>
             <form className="fitness-form text-start pt-5" onSubmit={handleSubmit}>
               
-              {/* ... Baki uper k fields same rahenge ... */}
               <label>Your Name:</label>
               <input type="text" name="name" value={formData.name} onChange={handleChange} />
               {errors.name && <p className="error">{errors.name}</p>}
               
-              {/* ... Email, Gender, Occupation, etc ... */}
               <label>Your Email:</label>
               <input type="email" name="email" value={formData.email} onChange={handleChange} />
               {errors.email && <p className="error">{errors.email}</p>}
@@ -273,13 +276,12 @@ Please review the details and contact the applicant for membership planning.
               <div className="height-weight-section">
                 <label id='fl'>Weight (kg):</label>
                 <input type="number" name="weight" value={formData.weight} onChange={handleChange} />
-                {errors.weight && <p className="error">{errors.weight}</p>}
                 <label>Height (feet):</label>
                 <input type="number" name="heightFeet" value={formData.heightFeet} onChange={handleChange} />
-                {errors.heightFeet && <p className="error">{errors.heightFeet}</p>}
                 <label id='tl'>Height (inches):</label>
                 <input type="number" name="heightInches" value={formData.heightInches} onChange={handleChange} />
-                {errors.heightInches && <p className="error">{errors.heightInches}</p>}
+                
+                {errors.measurements && <p className="error">{errors.measurements}</p>}
               </div>
 
               <label>BMI:</label>
