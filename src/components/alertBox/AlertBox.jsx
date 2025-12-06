@@ -8,27 +8,62 @@ function AlertBox({ show, onClose, onFormSubmit }) {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     useEffect(() => {
         document.body.style.overflow = show ? 'hidden' : 'unset';
         return () => (document.body.style.overflow = 'unset');
     }, [show]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!name || !email) {
-            setError('Email field is required.');
+            setError('Both name and email are required.');
             return;
         }
 
         setError('');
         setLoading(true);
         
-        // Simulating a network request
-        setTimeout(() => {
+        try {
+            // Call the backend API to send newsletter signup email
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    phone: 'N/A',
+                    subject: 'Newsletter Subscription Request',
+                    message: `Newsletter subscription request from ${name} (${email}). They want to receive fitness tips and updates.`,
+                    captchaToken: 'verified' // Since this is internal form
+                })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSuccess(true);
+                setLoading(false);
+                // Close the popup after showing success message
+                setTimeout(() => {
+                    onFormSubmit();
+                    onClose();
+                    setSuccess(false);
+                    setName('');
+                    setEmail('');
+                }, 2000);
+            } else {
+                setError('Error: ' + result.message);
+                setLoading(false);
+            }
+        } catch (error) {
+            console.error('Error sending newsletter signup:', error);
+            setError('Network error. Please try again later.');
             setLoading(false);
-            onFormSubmit();  // Call the parent function to handle submission
-        }, 2000);
+        }
     };
 
     if (!show) return null;
@@ -85,6 +120,7 @@ function AlertBox({ show, onClose, onFormSubmit }) {
                                     {loading ? <FontAwesomeIcon icon={faSpinner} spin /> : 'Sign Up Now'}
                                 </button>
                                 {error && <div className="error-message">{error}</div>}
+                                {success && <div className="success-message">✅ Successfully subscribed to our fitness newsletter!</div>}
                             </form>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './LeftParaRow.css'
+import { motion } from 'framer-motion'
 
 const LeftParaRow = ({ title, para, img = "assets/images/para_2.webp" }) => {
     return (
@@ -10,12 +11,16 @@ const LeftParaRow = ({ title, para, img = "assets/images/para_2.webp" }) => {
                     <div className='para-text mt-3'>{para}</div>
                 </div>
                 <div className='col-md-6 col-12'>
-                    <img
-                        className='para-img w-100'
-                        src={`${process.env.PUBLIC_URL}/${img}`}
-                        alt='description'
-                    />
-                </div>
+                     <motion.img
+                         className='para-img w-100'
+                         src={`${process.env.PUBLIC_URL}/${img}`}
+                         alt='description'
+                         initial={{ opacity: 0, y: 100, scale: 0.8 }}
+                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                         transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+                         viewport={{ once: true }}
+                     />
+                 </div>
             </div>
 
         </div>

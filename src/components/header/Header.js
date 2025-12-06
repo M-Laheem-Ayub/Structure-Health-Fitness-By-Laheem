@@ -59,9 +59,12 @@ const Header = ({ BgColor }) => {
     <header className={`header ${BgColor} ps-lg-5 pe-lg-4`}>
       <nav className="mx-lg-2 navbar bg-transparent navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand image-container" href="#">
-            <img className="hover-image" src="https://st.structure.com.pk/wp-content/uploads/2023/07/Sturcture-logo.png" alt="" />
-          </a>
+          <Link className="text-decoration-none" to="/">
+            <a className="navbar-brand image-container" href="#">
+              <img className="hover-image" src="https://st.structure.com.pk/wp-content/uploads/2023/07/Sturcture-logo.png" alt="" />
+            </a>
+          </Link>
+
           <button
             className={`my-navbar-toggler navbar-toggler ${isMenuOpen ? "active" : ""}`}
             type="button"
@@ -100,8 +103,8 @@ const Header = ({ BgColor }) => {
                 </Link>
               </li>
               <li className="nav-item">
-              <Link className="text-decoration-none" to="/membership">
-                <button type="button" className="join-btn my-menu-btn border-0 text-light">Join Now</button>
+                <Link className="text-decoration-none" to="/membership">
+                  <button type="button" className="join-btn my-menu-btn border-0 text-light">Join Now</button>
                 </Link>
               </li>
               <li className="nav-item s-icon">

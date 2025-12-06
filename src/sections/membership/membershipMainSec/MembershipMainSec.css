@@ -26,7 +26,22 @@
   }
   .height-weight-section label{
     display: inline-block;
+    margin-left: 10px;
   }
+
+  #fl{
+    margin-left:0px !important;
+  }
+  
+  @media screen and (max-width: 768px) {
+  #tl{
+    margin-left: 0px !important;
+  }
+  .height-weight-section input {
+    width: 14% !important;
+  }
+
+}
   .fitness-form input,
   .fitness-form select {
     width: 100%;
@@ -50,7 +65,7 @@
   }
   
   .height-weight-section input {
-    width: 10%;
+    width: 11%;
   }
   
   
@@ -84,4 +99,79 @@
     color: red;
     font-size: 0.9em;
   }
+
+.bmi-visual {
+  background-color: rgba(0, 0, 0, 0.8); /* Ye apki original dark background hai */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.bmi-visual h3 {
+  color: #ffd200; /* Yellow heading wesi hi */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Ye naya class add kiya hai graph ko white box mein dikhane ke liye */
+.chart-container-white {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  /* Graph text color ko handle karne k liye */
+  color: black; 
+}
+
+.bmi-indicator {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bmi-indicator p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffd200;
+}
+
+/* Chrome, Safari, Edge, Opera ke liye arrows hatane ka code */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox ke liye arrows hatane ka code */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* --- Desktop Default Settings --- */
+.chart-container-white.graph-wrapper {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  color: black;
+  height: 450px; /* Desktop par bari height */
+  width: 100%;
+}
+
+/* --- Mobile / Tablet Responsive Settings (Media Query) --- */
+@media screen and (max-width: 768px) {
+  .bmi-visual {
+    padding: 15px; /* Mobile pe padding kam */
+    margin-top: 30px;
+  }
+
+  .chart-container-white.graph-wrapper {
+    height: 300px; /* Mobile par height kam taake scroll na karna pare */
+    padding: 5px; /* Graph ke aas paas jagah kam */
+  }
+
+  .bmi-visual h3 {
+    font-size: 1.2rem; /* Heading choti mobile k liye */
+    margin-bottom: 15px;
+  }
   
+  .bmi-indicator p {
+    font-size: 1rem; /* Result text thora chota */
+  }
+}

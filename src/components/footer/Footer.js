@@ -23,16 +23,16 @@ const Footer = () => {
               <p className='left-footer-text'>Structure Health & Fitness Is The Best Gym For Ladies & Gents Located In Gulberg Lahore, Pakistan. A Top-notch Health Fitness Club With Experienced Trainers & Latest Gym Equipment.</p>
               <h4 className='footer-title pt-4'>Follow Us</h4>
               <div className='footer-icons-con pt-3'>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/StructureLHE" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faFacebook} size="2x" />
                 </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/structure_official/" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faInstagram} size="2x" />
                 </a>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@structurehealthandfitness" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faYoutube} size="2x" />
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/structure-health-and-fitness/" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
               </div>
@@ -49,18 +49,18 @@ const Footer = () => {
               <Link className="text-decoration-none border-0" to="/why-us">
                 <a href=''>Why Us</a>
                 </Link>
-              <Link className="text-decoration-none border-0" to="/why-us">
+              {/* <Link className="text-decoration-none border-0" to="/why-us">
                 <a href=''>Trainers</a>
-                </Link>
-              <Link className="text-decoration-none border-0" to="/why-us">
+                </Link> */}
+              {/* <Link className="text-decoration-none border-0" to="/why-us">
                 <a href=''>Blog</a>
-                </Link>
+                </Link> */}
                 <Link className="text-decoration-none border-0" to="/contact">
                 <a href=''>Contact Us</a>
                 </Link>
-              <Link className="text-decoration-none border-0" to="/membership">
+              {/* <Link className="text-decoration-none border-0" to="/membership">
                 <a href='' className='border-0'>Work With Us</a>
-                </Link>
+                </Link> */}
               </div>
             </div>
             <div className='col-md-4 col-12 text-center text-md-start '>
@@ -112,7 +112,7 @@ const Footer = () => {
        
       </div>
       <div className='footer-copyright' >
-        Copyright © 2023 – 2024 | <a href=''>Structure Health & Fitness</a>
+        Copyright © 2023 – 2026 | <a href=''>Structure Health & Fitness</a>
         </div>
     </div>
   )

@@ -1,70 +1,189 @@
-# Getting Started with Create React App
+# Structure Health & Fitness
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Banner](public/assets/images/BG_footer.webp)
 
-## Available Scripts
+**Structure Health & Fitness** is a modern, responsive full‑stack gym website built with **React.js** (client) and **Node.js / Express** (server). It includes an interactive BMI calculator with visual charts, secure contact handling, and is configured to deploy on **Vercel** as a serverless backend.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Live Preview:** `https://structure-health-fitness-by-laheem.vercel.app`
+*Replace the URL above with your live deployment link.*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Highlights
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `npm run build`
+* Responsive, mobile‑first UI built with **React** and **Bootstrap 5**.
+* Interactive **BMI calculator** with visual charts powered by `recharts`.
+* Smooth component animations using **framer‑motion**.
+* Client‑side form validation and **Google reCAPTCHA v2** for spam protection.
+* Routing with **React Router v6** for single‑page navigation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Express.js** server to receive contact/membership inquiries and send emails using **Nodemailer**.
+* Security hardening with **Helmet** and request **rate limiting**.
+* Ready for serverless deployment (Vercel functions) with `vercel.json` rewrites.
+* Basic health check endpoint for uptime monitoring.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Layer      | Technologies                                             |
+| ---------- | -------------------------------------------------------- |
+| Frontend   | React, Bootstrap 5, Recharts, Framer Motion, FontAwesome |
+| Backend    | Node.js, Express, Nodemailer                             |
+| Security   | Google reCAPTCHA v2, Helmet, express-rate-limit          |
+| Deployment | Vercel (Frontend + Serverless API)                       |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+web-acm-project-by-laheem-ayub/
+├── public/                 # Static assets (images, icons)
+├── server/                 # Backend logic and server configuration
+│   ├── server.js           # Express server entry point
+│   └── package.json        # Server dependencies & scripts
+├── src/                    # React source code
+│   ├── api/                # Static JSON / mock data
+│   ├── components/         # Reusable components (Header, Footer, Slider, etc.)
+│   ├── pages/              # Main pages (Home, Membership, Contact, etc.)
+│   ├── sections/           # Page sections (Hero, BMI, Testimonials, etc.)
+│   ├── App.js              # Main App component
+│   └── index.js            # React entry point
+├── vercel.json             # Vercel configuration for API rewrites
+├── package.json            # Root scripts and dependencies (if applicable)
+└── README.md               # Project documentation
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Setup & Run Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Follow these steps to run the project on your machine.
 
-### Code Splitting
+### 1. Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd web-acm-project-by-laheem-ayub
+```
 
-### Analyzing the Bundle Size
+### 2. Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Install dependencies for both frontend and backend.
 
-### Making a Progressive Web App
+```bash
+# From project root
+npm install
+# If server has its own package.json
+cd server && npm install && cd ..
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3. Environment variables
 
-### Advanced Configuration
+Create a `.env` file in the `server/` folder (or root if your project expects it there) and add credentials:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```env
+PORT=3001
+GMAIL_USER=your-email@gmail.com
+GMAIL_PASS=your-app-password
+# Optional: if using a transactional email service
+# EMAIL_SERVICE=SendGrid
+# SENDGRID_API_KEY=your-sendgrid-api-key
+```
 
-### Deployment
+> **Note:** Using a Google App Password (recommended) is safer than your primary Gmail password. Alternatively consider a transactional email provider (SendGrid, Mailgun) for production.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 4. Run the backend and frontend
 
-### `npm run build` fails to minify
+```bash
+# Start backend
+node server/server.js
+# or with nodemon
+# npx nodemon server/server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# In a separate terminal, start the React app
+npm start
+```
+
+Your app should be available at `http://localhost:3000` and API on the port defined in `.env` (e.g. `http://localhost:3001`).
+
+---
+
+## ☁️ Deployment (Vercel)
+
+This project is configured for deployment on Vercel (frontend + serverless backend).
+
+1. Push your repository to GitHub.
+2. Import the project in Vercel and connect your GitHub repo.
+3. Add environment variables in the Vercel dashboard (Project Settings > Environment Variables):
+
+   * `GMAIL_USER`
+   * `GMAIL_PASS`
+4. Deploy. The `vercel.json` file should forward API calls to the serverless function automatically.
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint       | Description                                                                        |
+| ------ | -------------- | ---------------------------------------------------------------------------------- |
+| POST   | `/api/contact` | Accepts contact/membership form data and sends an email to the admin.              |
+| GET    | `/api/health`  | Returns a simple status (e.g. `{ status: "ok" }`) to verify the server is running. |
+
+> Adjust endpoint paths in this table to match your actual server routes.
+
+---
+
+## ✅ Security & Best Practices
+
+* Use **Google reCAPTCHA v2** or an equivalent service for production forms.
+* Store secrets in environment variables (never commit `.env`).
+* Use a transactional email provider for higher deliverability in production.
+* Consider adding logging and error monitoring (Sentry, Logflare, etc.) for production.
+
+---
+
+## 📦 Scripts (suggested)
+
+Add these convenience scripts to your `package.json` (root or server) if not already present:
+
+```json
+{
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "server": "node server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm start\""
+  }
+}
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome. If you want to contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes and push to your fork
+4. Open a Pull Request with a clear description of changes
+
+---
+
+## 👤 Author
+
+**Laheem Ayub** – Full Stack Developer
+GitHub: `https://github.com/M-Laheem-Ayub`
+
+
+*Last updated: December 6, 2025*

@@ -13,6 +13,8 @@ const FormComponent = () => {
         email: '',
         phone: '',
         location: '',
+        subject: '3-Day Trial Membership Inquiry',
+        message: 'Customer interested in 3-day trial membership offer for 3,000 PKR',
     });
     const [errors, setErrors] = useState({});
     const [recaptchaError, setRecaptchaError] = useState(''); // New state for reCAPTCHA error
@@ -39,16 +41,51 @@ const FormComponent = () => {
         setErrors({ ...errors, [name]: '' }); // Clear error for current field
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const isValid = validateFields();
         if (!isValid) return; // Stop submission if fields are invalid
 
         if (verified) {
             setIsSubmitting(true);
-            setTimeout(() => {
-                navigate('/thank-you'); // Redirect to thank-you page
-            }, 2000); // 2 seconds delay
+            
+            try {
+                // Create name from first and last name
+                const fullName = `${formData.firstName} ${formData.lastName}`.trim();
+                
+                // Call the backend API to send email
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: fullName,
+                        email: formData.email,
+                        phone: formData.phone,
+                        subject: formData.subject,
+                        message: `${formData.message}\n\nLocation: ${formData.location}\nContact Info: ${formData.email}, ${formData.phone}`,
+                        captchaToken: 'verified' // Since reCAPTCHA is verified
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Success - redirect to thank-you page
+                    setTimeout(() => {
+                        navigate('/thank-you');
+                    }, 1000);
+                } else {
+                    // Error - show error message
+                    alert('Error: ' + result.message);
+                    setIsSubmitting(false);
+                }
+            } catch (error) {
+                console.error('Error sending email:', error);
+                alert('Network error. Please check if the email server is running.');
+                setIsSubmitting(false);
+            }
         } else {
             setRecaptchaError('Google reCAPTCHA verification failed, please try again later'); // Set reCAPTCHA error
         }

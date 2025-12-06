@@ -11,6 +11,7 @@ function KeepInTouchSec() {
         email: "",
         phone: "",
         branch: "",
+        subject: "Gym Membership Inquiry", // Default subject
         message: ""
     });
 
@@ -39,16 +40,44 @@ function KeepInTouchSec() {
         setFormData({ ...formData, [name]: value });
         setErrors({ ...errors, [name]: '' }); // Clear error for current field
     };
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const isValid = validateFields();
         if (!isValid) return; // Stop submission if fields are invalid
 
         if (verified) {
             setIsSubmitting(true);
-            setTimeout(() => {
-                navigate('/thank-you'); // Redirect to thank-you page
-            }, 2000); // 2 seconds delay
+            
+            try {
+                // Call the backend API to send email
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ...formData,
+                        captchaToken: 'verified' // Since reCAPTCHA is verified
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Success - redirect to thank-you page
+                    setTimeout(() => {
+                        navigate('/thank-you');
+                    }, 1000);
+                } else {
+                    // Error - show error message
+                    alert('Error: ' + result.message);
+                    setIsSubmitting(false);
+                }
+            } catch (error) {
+                console.error('Error sending email:', error);
+                alert('Network error. Please check if the email server is running.');
+                setIsSubmitting(false);
+            }
         } else {
             setRecaptchaError('Google reCAPTCHA verification failed, please try again later'); // Set reCAPTCHA error
         }
@@ -83,6 +112,20 @@ function KeepInTouchSec() {
                             value={formData.phone}
                             onChange={handleInputChange}
                         />
+                        {errors.phone && <div className='Keep-touch-error-message'>{errors.phone}</div>}
+                        <select
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleInputChange}
+                        >
+                            <option value="Gym Membership Inquiry">Gym Membership Inquiry</option>
+                            <option value="Personal Training">Personal Training</option>
+                            <option value="Group Classes">Group Classes</option>
+                            <option value="Nutrition Consultation">Nutrition Consultation</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Partnership Opportunity">Partnership Opportunity</option>
+                        </select>
+                        {errors.subject && <div className='Keep-touch-error-message'>{errors.subject}</div>}
                         {errors.phone && <div className='Keep-touch-error-message'>{errors.phone}</div>}
                         <select
                             name="branch"
