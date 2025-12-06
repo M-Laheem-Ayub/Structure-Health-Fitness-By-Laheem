@@ -33,7 +33,7 @@ const MembershipMainSec = () => {
     interestedInSession: '',
     activityLevel: '',
     eatingHabits: '',
-    commitmentLevel: 5,
+    commitmentLevel: 1,
     comments: '',
   });
   const navigate = useNavigate();
@@ -79,9 +79,17 @@ const MembershipMainSec = () => {
     if (!formData.name) newErrors.name = 'This field is required';
     if (!formData.email) newErrors.email = 'This field is required';
     if (!formData.gender) newErrors.gender = 'This field is required';
-    if (!formData.occupation) newErrors.occupation = 'This field is required';
     if (!formData.phone) newErrors.phone = 'This field is required';
     if (!formData.branch) newErrors.branch = 'This field is required';
+    // Physical measurements are required
+    if (!formData.weight) newErrors.weight = 'Weight is required';
+    if (!formData.heightFeet) newErrors.heightFeet = 'Height (feet) is required';
+    if (!formData.heightInches) newErrors.heightInches = 'Height (inches) is required';
+    // Fitness profile is required
+    if (formData.fitnessGoals.length === 0) newErrors.fitnessGoals = 'Please select at least one fitness goal';
+    if (!formData.smoking) newErrors.smoking = 'Please select smoking status';
+    if (!formData.alcohol) newErrors.alcohol = 'Please select alcohol consumption status';
+    // Occupation is optional - user can leave it blank
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -265,10 +273,13 @@ Please review the details and contact the applicant for membership planning.
               <div className="height-weight-section">
                 <label id='fl'>Weight (kg):</label>
                 <input type="number" name="weight" value={formData.weight} onChange={handleChange} />
+                {errors.weight && <p className="error">{errors.weight}</p>}
                 <label>Height (feet):</label>
                 <input type="number" name="heightFeet" value={formData.heightFeet} onChange={handleChange} />
+                {errors.heightFeet && <p className="error">{errors.heightFeet}</p>}
                 <label id='tl'>Height (inches):</label>
                 <input type="number" name="heightInches" value={formData.heightInches} onChange={handleChange} />
+                {errors.heightInches && <p className="error">{errors.heightInches}</p>}
               </div>
 
               <label>BMI:</label>
@@ -287,6 +298,7 @@ Please review the details and contact the applicant for membership planning.
                 <label><input type="checkbox" name="fitnessGoals" value="muscle gain" onChange={handleCheckboxChange} /> Muscle Gain</label>
                 <label><input type="checkbox" name="fitnessGoals" value="overall health" onChange={handleCheckboxChange} /> Overall Health</label>
               </div>
+              {errors.fitnessGoals && <p className="error">{errors.fitnessGoals}</p>}
 
               <label>Do You Smoke?</label>
               <div className="radio-group">
@@ -294,6 +306,7 @@ Please review the details and contact the applicant for membership planning.
                 <label><input type="radio" name="smoking" value="no" onChange={handleChange} /> No</label>
                 <label><input type="radio" name="smoking" value="sometimes" onChange={handleChange} /> Sometimes</label>
               </div>
+              {errors.smoking && <p className="error">{errors.smoking}</p>}
 
               <label>Do You Consume Alcohol?</label>
               <div className="radio-group">
@@ -301,6 +314,7 @@ Please review the details and contact the applicant for membership planning.
                 <label><input type="radio" name="alcohol" value="no" onChange={handleChange} /> No</label>
                 <label><input type="radio" name="alcohol" value="sometimes" onChange={handleChange} /> Sometimes</label>
               </div>
+              {errors.alcohol && <p className="error">{errors.alcohol}</p>}
 
               <label>Commitment Level (1-10):</label>
               <input type="range" name="commitmentLevel" min="1" max="10" value={formData.commitmentLevel} onChange={handleChange} />
