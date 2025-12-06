@@ -123,7 +123,7 @@ Please review the details and contact the applicant for membership planning.
       `;
 
       // Call the backend API to send email
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
