@@ -229,7 +229,7 @@ app.use((error, req, res, next) => {
 });
 
 // 404 handler
-app.use('*', (req, res) => {
+app.use((req, res) => {  // <-- Sirf '*' hataya hai
   res.status(404).json({
     success: false,
     message: 'Endpoint not found'
