@@ -254,6 +254,7 @@ Please review the details and contact the applicant for membership planning.
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
               </select>
+              {errors.gender && <p className="error">{errors.gender}</p>}
 
               <label>What is Your Occupation?</label>
               <input type="text" name="occupation" value={formData.occupation} onChange={handleChange} />
@@ -272,6 +273,7 @@ Please review the details and contact the applicant for membership planning.
                 <option value="Branch 2">DHA</option>
                 <option value="Branch 3">Johar Town</option>
               </select>
+              {errors.branch && <p className="error">{errors.branch}</p>}
 
               <div className="height-weight-section">
                 <label id='fl'>Weight (kg):</label>
