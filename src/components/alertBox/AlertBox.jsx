@@ -35,7 +35,6 @@ function AlertBox({ show, onClose, onFormSubmit }) {
                 body: JSON.stringify({
                     name: name,
                     email: email,
-                    phone: 'N/A',
                     subject: 'Newsletter Subscription Request',
                     message: `Newsletter subscription request from ${name} (${email}). They want to receive fitness tips and updates.`,
                     captchaToken: 'verified' // Since this is internal form

@@ -147,10 +147,10 @@ app.post('/api/contact', async (req, res) => {
     const { name, email, phone, subject, message, captchaToken } = req.body;
 
     // Validation
-    if (!name || !email || !phone || !subject || !message) {
+    if (!name || !email || !subject || !message) {
       return res.status(400).json({
         success: false,
-        message: 'All fields are required'
+        message: 'Name, email, subject and message are required'
       });
     }
 
@@ -161,7 +161,8 @@ app.post('/api/contact', async (req, res) => {
       });
     }
 
-    if (!isValidPhone(phone)) {
+    // Phone is optional - only validate if provided
+    if (phone && !isValidPhone(phone)) {
       return res.status(400).json({
         success: false,
         message: 'Invalid phone number format'
@@ -187,7 +188,7 @@ app.post('/api/contact', async (req, res) => {
     const formData = {
       name: name.trim(),
       email: email.trim(),
-      phone: phone.trim(),
+      phone: phone ? phone.trim() : 'Not provided',
       subject: subject.trim(),
       message: message.trim()
     };
